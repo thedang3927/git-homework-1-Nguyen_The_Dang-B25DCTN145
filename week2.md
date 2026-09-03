@@ -38,4 +38,10 @@ PART B
  1 file changed, 2 insertions(+)
  create mode 100644 wip.txt
 
+2.
+nguyen-the-dang@nguyen-the-dang:~/git-homework-1-Nguyen_The_Dang-B25DCTN145$ git branch --merged
+* wip
+nguyen-the-dang@nguyen-the-dang:~/git-homework-1-Nguyen_The_Dang-B25DCTN145$ git branch --no-merged
+  main
+  week2b 
 
