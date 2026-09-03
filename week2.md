@@ -23,9 +23,20 @@ PART A
 
 finding: Khi chuyển lại nhánh main, dòng được thêm vào nhánh week2 đã biến mất vì commit đó chỉ tồn tại trên nhánh week2 và chưa được merge vào nhánh main.
 
+4.
+ Merge made by the 'ort' strategy.
+ week2.md    | 25 +++++++++++++++++++++++++
+ working.txt |  3 +++
+ 2 files changed, 28 insertions(+)
+ create mode 100644 working.txt
+
+
 PART B
 1.
- [wip 1502654] Add wip.txt
- 1 file changed, 2 insertions(+)
- create mode 100644 wip.txt
+ Updating 451f9a7..72803b7
+ Fast-forward
+ week2.md    | 25 +++++++++++++++++++++++++
+ working.txt |  3 +++
+ 2 files changed, 28 insertions(+)
+ create mode 100644 working.txt
 
