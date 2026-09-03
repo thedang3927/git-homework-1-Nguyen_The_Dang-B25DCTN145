@@ -23,4 +23,9 @@ PART A
 
 finding: Khi chuyển lại nhánh main, dòng được thêm vào nhánh week2 đã biến mất vì commit đó chỉ tồn tại trên nhánh week2 và chưa được merge vào nhánh main.
 
+PART B
+1.
+ [wip 1502654] Add wip.txt
+ 1 file changed, 2 insertions(+)
+ create mode 100644 wip.txt
 
