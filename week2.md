@@ -47,3 +47,6 @@ nguyen-the-dang@nguyen-the-dang:~/git-homework-1-Nguyen_The_Dang-B25DCTN145$ git
 nguyen-the-dang@nguyen-the-dang:~/git-homework-1-Nguyen_The_Dang-B25DCTN145$ git branch --no-merged
   wip
 
+3.
+nguyen-the-dang@nguyen-the-dang:~/git-homework-1-Nguyen_The_Dang-B25DCTN145$ git branch -d week2b
+Deleted branch week2b (was 9256bf7).
