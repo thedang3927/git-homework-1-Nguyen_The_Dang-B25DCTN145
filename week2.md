@@ -69,3 +69,37 @@ To https://github.com/thedang3927/git-homework-1-Nguyen_The_Dang-B25DCTN145.git
  * [new branch]      work-in-progress -> work-in-progress
 branch 'work-in-progress' set up to track 'origin/work-in-progress'.
 
+PART 4
+1.
+ nguyen-the-dang@nguyen-the-dang:~/git-homework-1-Nguyen_The_Dang-B25DCTN145$ git checkout main
+Switched to branch 'main'
+Your branch is ahead of 'origin/main' by 16 commits.
+  (use "git push" to publish your local commits)
+nguyen-the-dang@nguyen-the-dang:~/git-homework-1-Nguyen_The_Dang-B25DCTN145$ git checkout -b experiment
+Switched to a new branch 'experiment'
+nguyen-the-dang@nguyen-the-dang:~/git-homework-1-Nguyen_The_Dang-B25DCTN145$ vim exp1.txt
+nguyen-the-dang@nguyen-the-dang:~/git-homework-1-Nguyen_The_Dang-B25DCTN145$ git add exp1.txt 
+nguyen-the-dang@nguyen-the-dang:~/git-homework-1-Nguyen_The_Dang-B25DCTN145$ git commit -m "add file exp1.txt"
+[experiment 4fb156f] add file exp1.txt
+ 1 file changed, 1 insertion(+)
+ create mode 100644 exp1.txt
+nguyen-the-dang@nguyen-the-dang:~/git-homework-1-Nguyen_The_Dang-B25DCTN145$ vim exp2.txt
+nguyen-the-dang@nguyen-the-dang:~/git-homework-1-Nguyen_The_Dang-B25DCTN145$ git add exp2.text
+fatal: pathspec 'exp2.text' did not match any files
+nguyen-the-dang@nguyen-the-dang:~/git-homework-1-Nguyen_The_Dang-B25DCTN145$ git add exp2.txt
+nguyen-the-dang@nguyen-the-dang:~/git-homework-1-Nguyen_The_Dang-B25DCTN145$ git commit -m "add file exp2.txt"
+[experiment 91b09f1] add file exp2.txt
+ 1 file changed, 2 insertions(+)
+
+2.
+nguyen-the-dang@nguyen-the-dang:~/git-homework-1-Nguyen_The_Dang-B25DCTN145$ git checkout main
+Switched to branch 'main'
+Your branch is ahead of 'origin/main' by 16 commits.
+  (use "git push" to publish your local commits)
+nguyen-the-dang@nguyen-the-dang:~/git-homework-1-Nguyen_The_Dang-B25DCTN145$ vim newfile.txt
+nguyen-the-dang@nguyen-the-dang:~/git-homework-1-Nguyen_The_Dang-B25DCTN145$ git add newfile.txt 
+nguyen-the-dang@nguyen-the-dang:~/git-homework-1-Nguyen_The_Dang-B25DCTN145$ git commit -m "add newfile.txt"
+[main 0d0cd86] add newfile.txt
+ 1 file changed, 2 insertions(+)
+ create mode 100644 newfile.txt
+
