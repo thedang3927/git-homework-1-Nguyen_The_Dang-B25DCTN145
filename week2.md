@@ -104,4 +104,45 @@ nguyen-the-dang@nguyen-the-dang:~/git-homework-1-Nguyen_The_Dang-B25DCTN145$ git
  create mode 100644 newfile.txt
 
 3 & 4.
+nguyen-the-dang@nguyen-the-dang:~/git-homework-1-Nguyen_The_Dang-B25DCTN145$ git checkout -b experiment
+Switched to a new branch 'experiment'
+nguyen-the-dang@nguyen-the-dang:~/git-homework-1-Nguyen_The_Dang-B25DCTN145$ vim exp1.txt
+nguyen-the-dang@nguyen-the-dang:~/git-homework-1-Nguyen_The_Dang-B25DCTN145$ git add exp1.txt 
+nguyen-the-dang@nguyen-the-dang:~/git-homework-1-Nguyen_The_Dang-B25DCTN145$ git commit -m "add exp1.txt"
+[experiment 7b57b02] add exp1.txt
+ 1 file changed, 1 insertion(+)
+ create mode 100644 exp1.txt
+nguyen-the-dang@nguyen-the-dang:~/git-homework-1-Nguyen_The_Dang-B25DCTN145$ vim exp2.txt
+nguyen-the-dang@nguyen-the-dang:~/git-homework-1-Nguyen_The_Dang-B25DCTN145$ git add exp2.txt 
+nguyen-the-dang@nguyen-the-dang:~/git-homework-1-Nguyen_The_Dang-B25DCTN145$ git commit -m "add exp2.txt"
+[experiment cb3bece] add exp2.txt
+ 1 file changed, 2 insertions(+)
+ create mode 100644 exp2.txt
+nguyen-the-dang@nguyen-the-dang:~/git-homework-1-Nguyen_The_Dang-B25DCTN145$ git checkout main
+Switched to branch 'main'
+Your branch is ahead of 'origin/main' by 18 commits.
+  (use "git push" to publish your local commits)
+nguyen-the-dang@nguyen-the-dang:~/git-homework-1-Nguyen_The_Dang-B25DCTN145$ vim main.txt
+nguyen-the-dang@nguyen-the-dang:~/git-homework-1-Nguyen_The_Dang-B25DCTN145$ git add main.txt
+nguyen-the-dang@nguyen-the-dang:~/git-homework-1-Nguyen_The_Dang-B25DCTN145$ git commit -m "add main.txt on main"
+[main 661151b] add main.txt on main
+ 1 file changed, 2 insertions(+)
+ create mode 100644 main.txt
+nguyen-the-dang@nguyen-the-dang:~/git-homework-1-Nguyen_The_Dang-B25DCTN145$ git checkout experiment 
+Switched to branch 'experiment'
+nguyen-the-dang@nguyen-the-dang:~/git-homework-1-Nguyen_The_Dang-B25DCTN145$ git rebase main
+Successfully rebased and updated refs/heads/experiment.
+nguyen-the-dang@nguyen-the-dang:~/git-homework-1-Nguyen_The_Dang-B25DCTN145$ git checkout main
+Switched to branch 'main'
+Your branch is ahead of 'origin/main' by 19 commits.
+  (use "git push" to publish your local commits)
+nguyen-the-dang@nguyen-the-dang:~/git-homework-1-Nguyen_The_Dang-B25DCTN145$ git merge experiment 
+Updating 661151b..eee9b00
+Fast-forward
+ exp1.txt | 1 +
+ exp2.txt | 2 ++
+ 2 files changed, 3 insertions(+)
+ create mode 100644 exp1.txt
+ create mode 100644 exp2.txt
+
 Step 4 (Explanation): Git rebase rewritten the commit history of experiment. It took the 2 commits made on experiment and replayed them sequentially on top of the latest commit of main (Add main.txt on main). This produced a linear history instead of a branched merge structure.
