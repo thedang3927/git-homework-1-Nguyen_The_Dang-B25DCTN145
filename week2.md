@@ -50,3 +50,22 @@ nguyen-the-dang@nguyen-the-dang:~/git-homework-1-Nguyen_The_Dang-B25DCTN145$ git
 3.
 nguyen-the-dang@nguyen-the-dang:~/git-homework-1-Nguyen_The_Dang-B25DCTN145$ git branch -d week2b
 Deleted branch week2b (was 9256bf7).
+
+4.
+nguyen-the-dang@nguyen-the-dang:~/git-homework-1-Nguyen_The_Dang-B25DCTN145$ git branch -m wip work-in-progress
+nguyen-the-dang@nguyen-the-dang:~/git-homework-1-Nguyen_The_Dang-B25DCTN145$ git push -u origin work-in-progress 
+Enumerating objects: 38, done.
+Counting objects: 100% (38/38), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (31/31), done.
+Writing objects: 100% (37/37), 3.50 KiB | 1.17 MiB/s, done.
+Total 37 (delta 17), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (17/17), done.
+remote: 
+remote: Create a pull request for 'work-in-progress' on GitHub by visiting:
+remote:      https://github.com/thedang3927/git-homework-1-Nguyen_The_Dang-B25DCTN145/pull/new/work-in-progress
+remote: 
+To https://github.com/thedang3927/git-homework-1-Nguyen_The_Dang-B25DCTN145.git
+ * [new branch]      work-in-progress -> work-in-progress
+branch 'work-in-progress' set up to track 'origin/work-in-progress'.
+
