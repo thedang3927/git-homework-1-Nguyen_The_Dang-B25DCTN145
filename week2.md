@@ -40,3 +40,10 @@ PART B
  2 files changed, 28 insertions(+)
  create mode 100644 working.txt
 
+2.
+nguyen-the-dang@nguyen-the-dang:~/git-homework-1-Nguyen_The_Dang-B25DCTN145$ git branch --merged
+* main
+  week2b
+nguyen-the-dang@nguyen-the-dang:~/git-homework-1-Nguyen_The_Dang-B25DCTN145$ git branch --no-merged
+  wip
+
