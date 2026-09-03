@@ -18,5 +18,6 @@ PART A
  1 file changed, 1 insertion(+)
 
 3.nguyenthedang
+ [week2 021a62a] Update week2.md on branch week2
+ 1 file changed, 21 insertions(+)
 
- 
