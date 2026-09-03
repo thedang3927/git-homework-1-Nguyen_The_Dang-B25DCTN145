@@ -103,3 +103,5 @@ nguyen-the-dang@nguyen-the-dang:~/git-homework-1-Nguyen_The_Dang-B25DCTN145$ git
  1 file changed, 2 insertions(+)
  create mode 100644 newfile.txt
 
+3 & 4.
+Step 4 (Explanation): Git rebase rewritten the commit history of experiment. It took the 2 commits made on experiment and replayed them sequentially on top of the latest commit of main (Add main.txt on main). This produced a linear history instead of a branched merge structure.
