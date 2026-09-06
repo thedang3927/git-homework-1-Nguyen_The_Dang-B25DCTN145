@@ -16,7 +16,12 @@ PART A
     5. Copy the HelloWorld.txt file to dir1 again, but this time use the flag to show the overwriting warning
         nguyen-the-dang@nguyen-the-dang:~/ex3$ cp -i HelloWorld.txt dir1
         cp: overwrite 'dir1/HelloWorld.txt'? yes
+    
+    6. Rename HelloWorld.txt to Hi.txt
         nguyen-the-dang@nguyen-the-dang:~/ex3$ mv HelloWorld.txt Hi.txt
+    
+    7. Move that file to dir2
+        nguyen-the-dang@nguyen-the-dang:~/ex3$ mv sample.txt dir2
 
 PART B
     1. Create 3 hard links for file Hi.txt in the directories ex3, dir 1, dir 2, name all of them Hi-hard (3 separate commands)
