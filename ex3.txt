@@ -1,0 +1,138 @@
+PART A
+    1. Make sure you are in home directory, then create a directory ex3
+        nguyen-the-dang@nguyen-the-dang:~$ cd ~
+        nguyen-the-dang@nguyen-the-dang:~$ mkdir ex3
+    
+    2. Go into directory ex3
+        nguyen-the-dang@nguyen-the-dang:~$ cd ex3
+    
+    3. Create 2 directories dir1 and dir2
+        nguyen-the-dang@nguyen-the-dang:~/ex3$ mkdir dir1 dir2
+    
+    4. Create an empty HelloWorld.txt file, then copy that file to the dir1 directory
+        nguyen-the-dang@nguyen-the-dang:~/ex3$ vim HelloWorld.txt
+        nguyen-the-dang@nguyen-the-dang:~/ex3$ cp HelloWorld.txt dir1
+    
+    5. Copy the HelloWorld.txt file to dir1 again, but this time use the flag to show the overwriting warning
+        nguyen-the-dang@nguyen-the-dang:~/ex3$ cp -i HelloWorld.txt dir1
+        cp: overwrite 'dir1/HelloWorld.txt'? yes
+        nguyen-the-dang@nguyen-the-dang:~/ex3$ mv HelloWorld.txt Hi.txt
+
+PART B
+    1. Create 3 hard links for file Hi.txt in the directories ex3, dir 1, dir 2, name all of them Hi-hard (3 separate commands)
+        nguyen-the-dang@nguyen-the-dang:~/ex3$ ln Hi.txt Hi-hard
+        nguyen-the-dang@nguyen-the-dang:~/ex3$ ln Hi.txt dir1/Hi-hard
+        nguyen-the-dang@nguyen-the-dang:~/ex3$ ln Hi.txt dir2/Hi-hard
+    
+    2. Create a symbolic link for Hi.txt in ex3 directory, name it Hi-sym
+        nguyen-the-dang@nguyen-the-dang:~/ex3$ ln -s Hi.txt Hi-sym
+    
+    3. Remove Hi-hard link in the ex3 directory
+        nguyen-the-dang@nguyen-the-dang:~/ex3$ rm Hi-hard 
+
+    4. Remove the file Hi.txt
+        nguyen-the-dang@nguyen-the-dang:~/ex3$ rm Hi.txt 
+    
+    5. Copy your output when running ls -li command here
+        nguyen-the-dang@nguyen-the-dang:~/ex3$ ls -li
+        total 8
+        4327388 drwxrwxr-x 2 nguyen-the-dang nguyen-the-dang 4096 Sep  5 21:27 dir1
+        4327389 drwxrwxr-x 2 nguyen-the-dang nguyen-the-dang 4096 Sep  5 21:28 dir2
+        4327405 lrwxrwxrwx 1 nguyen-the-dang nguyen-the-dang    6 Sep  5 21:31 Hi-sym -> Hi.txt
+    
+PART C
+    1. List all files in /bin and /usr/bin combined, sort them alphabetically, remove duplicates, and count how many unique program names exist across both directories. (Hint: you'll need three filters chained together.) 
+        nguyen-the-dang@nguyen-the-dang:~/ex3$ ls /bin /usr/bin | sort | uniq | wc -l
+        1584
+    
+    2. From that sorted list, Remove duplicates, find every program name that contains the substring "zip" and print only those.
+        nguyen-the-dang@nguyen-the-dang:~/ex3$ ls /bin /usr/bin | sort | uniq | grep zip
+        bunzip2
+        bzip2
+        bzip2recover
+        funzip
+        gunzip
+        gzip
+        preunzip
+        prezip
+        prezip-bin
+        streamzip
+        unzip
+        unzipsfx
+        zip
+        zipcloak
+        zipdetails
+        zipgrep
+        zipinfo
+        zipnote
+        zipsplit
+    
+    3. generate your own text file with at least 30 lines :
+        nguyen-the-dang@nguyen-the-dang:~/ex3$ seq 1 30 > sample.txt
+        
+    and: Print only the first 5 lines.
+            nguyen-the-dang@nguyen-the-dang:~/ex3$ head -n 5 sample.txt 
+            1
+            2
+            3
+            4
+            5
+
+         Print only the last 5 lines.
+            nguyen-the-dang@nguyen-the-dang:~/ex3$ tail -n 5 sample.txt 
+            26
+            27
+            28
+            29
+            30
+
+         Count the total number of lines, words, and bytes in the file.
+            nguyen-the-dang@nguyen-the-dang:~/ex3$ wc sample.txt        
+            30 30 81 sample.txt
+    
+    4. list a directory, save the full listing to full_listing.txt via tee to also list them on the screen
+        nguyen-the-dang@nguyen-the-dang:~/ex3$ ls | tee full_listing.txt
+        dir1
+        dir2
+        Hi-sym
+        sample.txt
+
+PART D
+    1. Create a directory permissions, inside that directory create three files: secret.txt, shared.txt, public.txt. Set the following permissions using octal notation:
+        nguyen-the-dang@nguyen-the-dang:~/ex3$ mkdir permissions
+        nguyen-the-dang@nguyen-the-dang:~/ex3$ cd permissions/
+        nguyen-the-dang@nguyen-the-dang:~/ex3/permissions$ vim secret.txt
+        nguyen-the-dang@nguyen-the-dang:~/ex3/permissions$ vim shared.txt
+        nguyen-the-dang@nguyen-the-dang:~/ex3/permissions$ vim public.txt
+
+    secret.txt → owner can read/write, no one else has any access.
+        nguyen-the-dang@nguyen-the-dang:~/ex3/permissions$ chmod 600 secret.txt 
+    
+    shared.txt → owner and group can read/write, others can only read.
+        nguyen-the-dang@nguyen-the-dang:~/ex3/permissions$ chmod 664 shared.txt 
+    
+    public.txt → everyone can read, write, and execute.
+        nguyen-the-dang@nguyen-the-dang:~/ex3/permissions$ chmod 777 secret.txt 
+
+
+    2. Check your current umask value, create a new file (any file), run ls -l and explain why that new file has that permission as you saw from the ls -l command
+        nguyen-the-dang@nguyen-the-dang:~/ex3/permissions$ umask
+        0002
+        nguyen-the-dang@nguyen-the-dang:~/ex3/permissions$ touch newfile.txt
+        nguyen-the-dang@nguyen-the-dang:~/ex3/permissions$ ls -l
+        total 0
+        -rw-rw-r-- 1 nguyen-the-dang nguyen-the-dang 0 Sep  6 11:19 newfile.txt
+        -rw-rw-r-- 1 nguyen-the-dang nguyen-the-dang 0 Sep  6 11:02 public.txt
+        -rwxrwxrwx 1 nguyen-the-dang nguyen-the-dang 0 Sep  6 11:00 secret.txt
+        -rw-rw-r-- 1 nguyen-the-dang nguyen-the-dang 0 Sep  6 11:02 shared.txt
+    
+        Explain:
+        Bởi vì quyền ban đầu của file trong Linux là 666 (tương đương với rw-rw-rw) và không tự động cấp quyền thực thi (x) cho file mới. 
+        Mà umask của em là 0002 (000 000 010) và kết quả của lệnh ls -l là -rw-rw-r-- , do đó mà owner và group có quyền đọc/ghi, còn others chỉ có quyền đọc và bị loại bỏ quyền ghi.
+        real permission = default permission - umask permission
+                        = (110 110 110) - (000 000 010)
+                        = (110 110 100) (-rw-rw-r--) 
+
+
+
+
